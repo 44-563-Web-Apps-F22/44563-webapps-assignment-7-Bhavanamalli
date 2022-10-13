@@ -54,6 +54,7 @@
   <div class="col-md-2"><img onclick = "check(23)" id="img23" src="tressurebox.jpg" alt="closedbox" style="width: 150px;height:110px;"></div>
   <div class="col-md-2"><img onclick = "check(24)" id="img24" src="tressurebox.jpg" alt="closedbox" style="width: 150px;height:110px;"></div>
 </div>
+<button class="btn btn-warning" id="game_button" onclick="reset()">Game button</button>
 <script>
   var ids=["img0","img1","img2","img3","img4","img5","img6","img7","img8","img9","img10","img11","img12","img13","img14","img15","img16","img17","img18","img19","img20","img21","img22","img23","img24"]
   var chestCount=0
@@ -114,6 +115,18 @@
         helptext=document.getElementById("help")
           helptext.innerHTML="sorry, no help available" 
       }
+      function reset(){
+    treasureLocation= Math.floor(Math.random() * 24)
+    var chestCount=0
+     var score=0
+  lastCheck=5
+  chests=document.getElementById("chests")
+    chests.innerHTML="Number of chests checked is "+chestCount
+    scoretext=document.getElementById("score")
+    scoretext.innerHTML="Score is "+score
+    
+
+  }
 
       
   }
